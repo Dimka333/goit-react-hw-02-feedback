@@ -1,0 +1,29 @@
+.good {
+  background-color: #6cdb08;
+  margin-right: 10px;
+  width: 80px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.neutral {
+  background: rgb(48, 114, 189);
+  margin-right: 10px;
+  width: 80px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.bad {
+  background: red;
+  margin-right: 10px;
+  width: 80px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
