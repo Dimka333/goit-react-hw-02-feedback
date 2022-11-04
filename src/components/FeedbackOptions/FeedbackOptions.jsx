@@ -3,7 +3,6 @@ import styles from './FeedbackOptions.module.css'
 
 const FeedbackOptions = ({ options, handleFeedback }) => {
   return (
-
     <div className={styles.btnCotainer}>
       {options.map((el) => (
         <button
@@ -19,7 +18,8 @@ const FeedbackOptions = ({ options, handleFeedback }) => {
 }
 
 FeedbackOptions.propTypes = {
-  handleFeedback: PropTypes.func.isRequired
+  handleFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default FeedbackOptions;

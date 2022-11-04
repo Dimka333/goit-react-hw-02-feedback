@@ -33,7 +33,7 @@ export class App extends Component {
       <>
         <Section title='Please leave feedback'>
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            options={Object.keys(this.state)}
             handleFeedback={this.handleFeedback}
           />
 
@@ -41,8 +41,8 @@ export class App extends Component {
         <Section title="Statistics">
           {this.countTotalFeedback() ? (
             <Statistics bad={this.state.bad} neutral={this.state.neutral} good={this.state.good}
-                        total={this.countTotalFeedback}
-                        positiveFeedback={this.countPositiveFeedbackPercentage}></Statistics>
+                        total={() => this.countTotalFeedback()}
+                        positiveFeedback={() => this.countPositiveFeedbackPercentage()}></Statistics>
           ) : (
            <Notification message="No feedback given"></Notification>
           )
